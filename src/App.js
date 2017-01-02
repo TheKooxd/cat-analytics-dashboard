@@ -1,22 +1,18 @@
 import React from 'react';
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
-import TestComponent from './components/TestComponent';
+import Overview from './components/pages/Overview/Overview';
 import NotFound from './components/NotFound';
-import Layout from './components/Layout'
-import DefaultStyle from './static/css/default.css'
+import Layout from './components/Layout';
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
-      <Router history={hashHistory}>
+      <Router history={browserHistory}>
         <Route path='/' component={Layout}>
-        <IndexRoute component={TestComponent} />
-        <Route path="styles" component={DefaultStyle} />
+        <IndexRoute component={Overview} />
         <Route path='*' component={NotFound} />
         </Route>
       </Router>
     );
   }
 }
-
-export default App
