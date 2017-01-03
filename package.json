@@ -38,7 +38,7 @@
     "less-loader": "^2.2.3",
     "react": "^0.14.6",
     "react-bootstrap": "^0.30.7",
-    "react-chartjs": "^0.8.0",
+    "react-chartjs": "git://github.com/reactjs/react-chartjs.git#chartjs-v2",
     "react-dom": "^0.14.8",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
