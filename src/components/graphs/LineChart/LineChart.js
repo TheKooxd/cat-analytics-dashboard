@@ -20,7 +20,7 @@ export default class DonughtGraph extends React.Component {
     labels: _.sortBy(labels.reverse()),
     datasets: [
         {
-            label: "My First dataset",
+            label: "Number of show results",
             fill: false,
             lineTension: 0.1,
             backgroundColor: "rgba(75,192,192,0.4)",

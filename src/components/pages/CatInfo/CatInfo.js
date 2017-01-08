@@ -132,7 +132,7 @@ export default class CatInfo extends React.Component {
   render() {
     return(
       <div className="col-md-12">
-        <PageHeader>{this.props.params.name}</PageHeader>
+        <PageHeader>{"Info for " + this.props.params.name}</PageHeader>
         <div className="col-md-6">
           <div className="panel panel-default">
           <div className="panel-heading">
@@ -157,6 +157,16 @@ export default class CatInfo extends React.Component {
         <div className="panel panel-default">
           <div className="panel-heading">
             <h3 className="panel-title">Apperance of cat during years</h3>
+          </div>
+            <div className="panel-body">
+            <LineChart data={this.state.yearCache}/>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6">
+        <div className="panel panel-default">
+          <div className="panel-heading">
+            <h3 className="panel-title">Cats perfomace</h3>
           </div>
             <div className="panel-body">
             <LineChart data={this.state.yearCache}/>

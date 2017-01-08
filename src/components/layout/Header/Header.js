@@ -6,6 +6,8 @@ import axios from 'axios';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, FormGroup, FormControl, Button } from 'react-bootstrap';
 import ErrorAlert from '../../alerts/ErrorAlert';
 
+import style from './Header.less';
+
 export default class Header extends React.Component {
 
   constructor(props) {
@@ -61,7 +63,7 @@ export default class Header extends React.Component {
           </NavDropdown>
         </Nav>
       </Navbar>
-      <ErrorAlert type="info" header="Early development notice" content="This is app is in early development and there might be lack of data and odd UI choises. If you know something about coding, take a look at my github."/>
+      <ErrorAlert type="info" header="Early development notice" content="This is app is in early development and there might be lack of data and odd UI choises. If you know something about coding, take a look at my github. You can also email me to nikolas.kohvakka@gmail.com"/>
       </div>
   )
   }

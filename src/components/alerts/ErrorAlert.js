@@ -5,16 +5,25 @@ export default class ErrorAlert extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {alertVisible: true};
+    this.state = {alertVisible: true, icon: "glyphicon"};
     this.handleAlertDismiss = this.handleAlertDismiss.bind(this);
     this.handleAlertShow = this.handleAlertShow.bind(this);
+  }
+
+  componentDidMount() {
+    if(this.props.type == "info") {
+      this.setState({icon: "glyphicon glyphicon-info-sign"})
+    }
+    if(this.props.type == "danger") {
+      this.setState({icon: "glyphicon glyphicon-exclamation-sign"})
+    }
   }
 
   render() {
     if (this.state.alertVisible) {
       return (
         <Alert bsStyle={this.props.type} onDismiss={this.handleAlertDismiss}>
-          <p><strong>{this.props.header}</strong> {this.props.content}</p>
+          <p><span className={this.state.icon}></span><strong>{' ' + this.props.header}</strong> {this.props.content}</p>
         </Alert>
       );
     }
