@@ -3,6 +3,7 @@ import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 're
 import Overview from './components/pages/Overview/Overview';
 import NotFound from './components/NotFound';
 import Layout from './components/Layout';
+import CatInfo from './components/pages/CatInfo/CatInfo';
 
 export default class App extends React.Component {
   render() {
@@ -10,6 +11,7 @@ export default class App extends React.Component {
       <Router history={browserHistory}>
         <Route path='/' component={Layout}>
         <IndexRoute component={Overview} />
+        <Route path='cat-info/:name' component={CatInfo} />
         <Route path='*' component={NotFound} />
         </Route>
       </Router>
